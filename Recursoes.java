@@ -1,11 +1,12 @@
 public class Recursoes {
     private int soma;
-    private int exp=1;
+    private int exp = 1;
 
     public Recursoes() {
         this.soma = 0;
     }
 
+    // 1
     public int somarFor(int a[]) {
         int soma = 0;
         for (int i = 0; i < a.length; i++) {
@@ -23,6 +24,7 @@ public class Recursoes {
         }
     }
 
+    // 2
     public int expFor(int x, int y) {
         for (int i = 0; i < y; i++) {
             exp *= x;
@@ -30,12 +32,32 @@ public class Recursoes {
         return exp;
     }
 
-    public int expRec(int x, int y){
-        if(y==0){
+    public int expRec(int x, int y) {
+        if (y == 0) {
             return exp;
-        } else{
-            x*=x;
-            return expRec(x, y-1);
+        } else {
+            x *= x;
+            return expRec(x, y - 1);
+        }
+    }
+
+    // 3
+    public void inverteFor(int[] a) {
+        int[] inverso = new int[a.length];
+        int inversor = a.length - 1;
+        System.out.println("Inverte com for: ");
+
+        for (int i = 0; i < a.length; i++) {
+            inverso[inversor] = a[i];
+            System.out.print(a[i] + " ");
+            inversor--;
+        }
+
+        System.out.println("\nInverso:");
+
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(inverso[i] + " ");
+
         }
     }
 }
