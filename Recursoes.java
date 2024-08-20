@@ -1,6 +1,7 @@
 public class Recursoes {
     private int soma;
     private int exp = 1;
+    private int o = 0;
 
     public Recursoes() {
         this.soma = 0;
@@ -8,7 +9,6 @@ public class Recursoes {
 
     // 1
     public int somarFor(int a[]) {
-        int soma = 0;
         for (int i = 0; i < a.length; i++) {
             soma += a[i];
         }
@@ -42,8 +42,8 @@ public class Recursoes {
     }
 
     // 3
-    public void inverteFor(int[] a) {
-        int[] inverso = new int[a.length];
+    public void inverteFor(int[] a, int[] inverso) {  //ta void
+
         int inversor = a.length - 1;
         System.out.println("Inverte com for: ");
 
@@ -58,6 +58,16 @@ public class Recursoes {
         for (int i = 0; i < a.length; i++) {
             System.out.print(inverso[i] + " ");
 
+        }
+    }
+
+    public int[] inverteRec(int[] a, int index, int[] inverso) {  //n ta printando
+        if (index == 0) {
+            return a;
+        } else {
+            inverso[index] = a[o];
+            o++;
+            return inverteRec(a, index - 1, inverso);
         }
     }
 }

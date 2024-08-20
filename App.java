@@ -16,9 +16,10 @@ public class App {
         System.out.println("Calcula com recursao: "+r.expRec(x,y));
         System.out.println("-----------------------------\n");
 
+        int[] inverso = new int[a.length];
         System.out.println("3- Inverte Array");
-        r.inverteFor(a);
-
+        r.inverteFor(a, inverso);
+        System.out.println("Inverte com recursao: "+r.inverteRec(a, index, inverso));
     }
 
 
