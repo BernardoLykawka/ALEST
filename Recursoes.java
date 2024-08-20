@@ -1,7 +1,6 @@
 public class Recursoes {
     private int soma;
-    private int index;
-    private int[] a;
+    private int exp=1;
 
     public Recursoes() {
         this.soma = 0;
@@ -25,17 +24,18 @@ public class Recursoes {
     }
 
     public int expFor(int x, int y) {
-        int exp = 1;
-
         for (int i = 0; i < y; i++) {
             exp *= x;
         }
         return exp;
     }
 
-    public int expRec(){
-
-       
-        
+    public int expRec(int x, int y){
+        if(y==0){
+            return exp;
+        } else{
+            x*=x;
+            return expRec(x, y-1);
+        }
     }
 }

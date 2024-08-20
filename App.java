@@ -1,4 +1,3 @@
-import java.net.Socket;
 
 public class App {
     public static void main(String[] args){
@@ -14,7 +13,8 @@ public class App {
         int x=2, y=5;
         System.out.println("Calcula exponencial");
         System.out.println("Calcula com for: "+r.expFor(x, y));
-        System.out.println("Calcula com recursão: "+r.expRec());
+        System.out.println("Calcula com recursao: "+r.expRec(x,y));
+        System.out.println("-----------------------------\n");
 
     }
 
