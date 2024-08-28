@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class App {
     public static void main(String[] args) {
         /*
@@ -33,7 +31,7 @@ public class App {
         lista.add(16);
         System.out.println("Verificando inserção após ter removido elemento: " + lista);
         
-        System.out.println("Adicionando o elemento 5 no indice 2, elemento aterior era: " + lista.set(2, 5));
+        System.out.println("Adicionando o elemento 5 no indice 2, elemento anterior era: " + lista.set(2, 5));
         System.out.println(lista);
         
         System.out.println("Lista contem elemento 0? " + lista.contains(0));
