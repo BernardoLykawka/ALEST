@@ -175,4 +175,39 @@ public class ListArray {
         }
         return false;
     }
+
+    /**
+     * Modifica o tamanho max da lista para o valor recebido
+     *
+     * @param newCapacity
+     */
+    public void setCapacity(int newCapacity) {
+        data = new Integer[newCapacity];
+    }
+
+    /**
+     * Inverte o conteudo da lista
+     * logaritmica
+     */
+
+    public void reverse(){
+        int temp;
+        int j=count-1;
+        for(int i=0;i<(count)/2;i++){
+            temp=data[i];
+            data[i]=data[j];
+            data[j]=temp;
+            j--;
+        }
+    }
+
+    public int countOcurrences(Integer element) {
+        int occ = 0;
+        for(int i=0;i<count;i++){
+            if(data[i].equals(element)){
+                occ++;
+            }
+        }
+        return occ;
+    }
 }

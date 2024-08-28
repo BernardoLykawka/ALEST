@@ -1,3 +1,5 @@
+import java.sql.SQLOutput;
+
 public class App {
     public static void main(String[] args) {
         /*
@@ -11,9 +13,14 @@ public class App {
         lista.add(4);
         lista.add(6);
         lista.add(9);
-        lista.add(2,7);
+        lista.add(2,2);
         System.out.println(lista);
-       
+
+        lista.reverse();
+        System.out.println(lista);
+
+        System.out.println("Conta quantas vezes o elemento 2 aparece: "+lista.countOcurrences(2));
+
         System.out.println("Tamanho da lista: " + lista.size());
 
         System.out.println("Elemento armazenado na primeira posicao da lista: " +lista.get(0));
