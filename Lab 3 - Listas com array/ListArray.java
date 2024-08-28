@@ -191,7 +191,7 @@ public class ListArray {
      */
 
     public void reverse(){
-        int temp;
+        Integer temp;
         int j=count-1;
         for(int i=0;i<(count)/2;i++){
             temp=data[i];
@@ -202,12 +202,42 @@ public class ListArray {
     }
 
     public int countOcurrences(Integer element) {
-        int occ = 0;
+        int oc = 0;
         for(int i=0;i<count;i++){
             if(data[i].equals(element)){
-                occ++;
+                oc++;
             }
         }
-        return occ;
+        return oc;
+    }
+
+    public void bubbleSort() {
+        Integer temp;
+        for(int i=0;i<count-1;i++){
+            for(int j=0;j<count-1;j++){
+                if(data[j]>data[j+1]){
+                    temp=data[j];
+                    data[j]=data[j+1];
+                    data[j+1]=temp;
+                }
+            }
+        }
+    }
+
+    public int binarySearch(int element){
+        int low = 0, high = count - 1, mid;
+        while(low<=high){
+            mid=(low+high)/2;
+            if(data[mid]==element){
+                return mid;
+            }
+            else if(data[mid]>element){
+                high=mid-1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+        return -1;
     }
 }

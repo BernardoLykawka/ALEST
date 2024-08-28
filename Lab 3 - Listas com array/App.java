@@ -12,10 +12,15 @@ public class App {
         lista.add(6);
         lista.add(9);
         lista.add(2,2);
-        System.out.println(lista);
+        System.out.println("Primeira lista: "+lista);
 
         lista.reverse();
-        System.out.println(lista);
+        System.out.println("\nReverte Lista: "+lista);
+
+        lista.bubbleSort();
+        System.out.println("\nBubble Sort: "+lista);
+
+        System.out.println("\nBinary Search está no index: "+lista.binarySearch(6));
 
         System.out.println("Conta quantas vezes o elemento 2 aparece: "+lista.countOcurrences(2));
 
