@@ -122,7 +122,7 @@ public class ListArray {
      */
     public int indexOf(Integer element) {
         for(int i=0;i<data.length;i++){
-            if(element==data[i]){
+            if(data[i].equals(element)){
                 return i;
             }
         }
@@ -222,6 +222,11 @@ public class ListArray {
                 }
             }
         }
+    }
+
+    public void InsertionSort() {
+        Integer temp;
+
     }
 
     public int binarySearch(int element){
